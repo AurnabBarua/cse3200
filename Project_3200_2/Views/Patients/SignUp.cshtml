@@ -1,0 +1,78 @@
+﻿@model Project_3200_2.Models.Patient
+
+@{
+    ViewBag.Title = "SignUp";
+    var errmsg = ViewBag.SignUpFailed;
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+<h2>SignUp</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Patient</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.PatientName,"User Name", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PatientName, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your full name" } })
+                @Html.ValidationMessageFor(model => model.PatientName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PatientPhone,"User Phone", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PatientPhone, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your phone number (01xxxxxxxxx)" } })
+                @Html.ValidationMessageFor(model => model.PatientPhone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PatientAddress,"User Address", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PatientAddress, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your home address" } })
+                @Html.ValidationMessageFor(model => model.PatientAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PatientEmail,"User Email", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PatientEmail, new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter your email" } })
+                @Html.ValidationMessageFor(model => model.PatientEmail, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PatientPassword,"User Password", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PatientPassword, new { htmlAttributes = new { @class = "form-control", @placeholder = "Create a password (minimum 8 character)" } })
+                @Html.ValidationMessageFor(model => model.PatientPassword, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Back", "Login",new { } ,new { @class = "btn button" }) 
+                <button type="submit" class="button">Create</button>
+            </div>
+        </div>
+    </div>
+}
+@if (errmsg != null)
+{
+    <p class="text-danger">@errmsg</p>
+}
+@*<div>
+    @Html.ActionLink("Back", "Login")
+</div>*@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

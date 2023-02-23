@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="1000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
+
+
+
+    <script src="https://kit.fontawesome.com/7b9da3eb34.js" crossorigin="anonymous"></script>
+
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Smart Health Clinic", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*<li>@Html.ActionLink("Home", "Index", "Home")</li>*@
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#service">Service</a></li>
+                    <li><a href="#review">review</a></li>
+                    @*<li><a href="#contact">contact</a></li>
+                    <li><a href="#post">post</a></li>*@
+                    @*<li>@Html.ActionLink("About", "Index", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Treatment", "TakeService", "Treatments")</li>
+                        <li>@Html.ActionLink("Task", "DashBoard", "Tasks")</li>
+                        <li>@Html.ActionLink("Operation", "DashBoard", "Operations")</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+
+    </div>
+    <footer>
+
+        <section class="footer">
+            <div class="container">
+
+                <div class="box-cont">
+
+                    <div class="box">
+
+                        <a href="" class="logo blogo" style="text-align: center;"><span class="mark">S</span>mart<span class="mark">H</span>ealth<span class="mark">C</span>linic</a>
+                        <p style="text-align: center;">
+                            Address: 14/15 Mehedibug <br>
+                            Smart Health Clinic <br>
+                            Chattogram, Bangladesh <br>
+                            Phone: 02-9358764 <br>
+                            
+
+                        </p>
+
+                    </div>
+
+                    <div class="box mark" style="line-height: 3rem; background-color: black;">
+                        <h3>links</h3>
+                        <a href="#home">Home</a>
+                        <a href="#about">About Us</a>
+                        <a href="#service">Service</a>
+                        <a href="#review">Reviews</a>
+
+                    </div>
+
+
+                    <div class="box mark " style="line-height: 3rem;">
+                        <h3>Follow Us</h3>
+                        <a href="">Facebook</a>
+                        <a href="">E-Mail</a>
+                        <a href="">Twitter</a>
+                        <a href="">Instagram</a>
+                        <a href="">WWW.SmartHealthClinic.com</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <h1 class="credit">Created by <span>Aurnab Barua, Md. Abu Hanjala & Ayub Tanvir</span> </h1>
+
+
+            @*<p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>*@
+        </section>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

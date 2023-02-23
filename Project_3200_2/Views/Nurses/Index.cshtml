@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Project_3200_2.Models.Nurse>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn button" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NurseName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NurseEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NursePassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NurseAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NursePhone)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NurseName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NurseEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NursePassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NurseAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NursePhone)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.NurseId }, new { @class = "btn button" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.NurseId }, new { @class = "btn button" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.NurseId }, new { @class = "btn button" })
+        </td>
+    </tr>
+}
+
+</table>

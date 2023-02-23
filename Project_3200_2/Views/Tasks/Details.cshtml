@@ -1,0 +1,43 @@
+﻿@model Project_3200_2.Models.Task
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Task</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskProblem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskProblem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaskDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaskDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PatientId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PatientId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TaskId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

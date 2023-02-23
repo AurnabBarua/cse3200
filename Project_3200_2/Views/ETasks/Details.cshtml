@@ -1,0 +1,43 @@
+﻿@model Project_3200_2.Models.ETask
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ETask</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ETaskName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETaskName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ETaskStartTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETaskStartTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ETaskEndTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ETaskEndTime)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ETaskId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

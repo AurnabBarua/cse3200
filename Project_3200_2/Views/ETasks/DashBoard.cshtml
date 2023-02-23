@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Project_3200_2.Models.ETask>
+
+@{
+    ViewBag.Title = "DashBoard";
+    var id = ViewBag.Id;
+    Layout = "~/Views/Shared/_Layout_Employee.cshtml";
+}
+
+<h2>All Tasks</h2>
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.ETaskName)*@
+          <b>  Task Name </b>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.ETaskStartTime)*@
+           <b> Start Time </b>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.ETaskEndTime)*@
+            <b>End Time </b>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    if (item.EmployeeId == id)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ETaskName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ETaskStartTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ETaskEndTime)
+        </td>
+        <td>
+           
+        </td>
+    </tr>
+    }
+    
+}
+
+</table>

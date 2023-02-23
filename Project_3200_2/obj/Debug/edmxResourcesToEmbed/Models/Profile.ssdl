@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PROJECT_3200Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DOCTOR_PROFILE">
+    <Key>
+      <PropertyRef Name="DOCTOR_ID" />
+    </Key>
+    <Property Name="DOCTOR_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DOCTOR_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOCTOR_EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOCTOR_PASSWORD" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOCTOR_ADDRESS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOCTOR_CATAGORY" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DOCTOR_PHONE" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NURSE_PROFILE">
+    <Key>
+      <PropertyRef Name="NURSE_ID" />
+    </Key>
+    <Property Name="NURSE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NURSE_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NURSE_EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NURSE_PASSWORD" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NURSE_ADDRESS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NURSE_PHONE" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PATIENT_PROFILE">
+    <Key>
+      <PropertyRef Name="PATIENT_ID" />
+    </Key>
+    <Property Name="PATIENT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PATIENT_NAME" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PATIENT_PHONE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PATIENT_ADDRESS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PATIENT_EMAIL" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PATIENT_PASSWORD" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="PROJECT_3200ModelStoreContainer">
+    <EntitySet Name="DOCTOR_PROFILE" EntityType="Self.DOCTOR_PROFILE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NURSE_PROFILE" EntityType="Self.NURSE_PROFILE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PATIENT_PROFILE" EntityType="Self.PATIENT_PROFILE" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

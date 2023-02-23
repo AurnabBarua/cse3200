@@ -1,0 +1,65 @@
+﻿
+@{
+    ViewBag.Title = "_Layout_Home";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta authorName="Mark_VaranVal">
+    <title>Health_Care_Max</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <!---Bootstrup cdn link-->
+    <!-- Bootstrup Offline nhi chlne ka ha..   -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
+
+    <!---Font awesome kit by my account-->
+
+    <script src="https://kit.fontawesome.com/7b9da3eb34.js" crossorigin="anonymous"></script>
+
+    <!--Font awasome cdn link-->
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+
+    <!---Main css file-->
+
+    <link rel="stylesheet" href="~/Content/style.css">
+
+
+</head>
+
+<body>
+
+    <!--Header section-->
+
+    <header>
+
+        <div class="cont">
+            <a href="" class="logo"><span class="mark">S</span>mart<span class="mark">H</span>ealth<span class="mark">C</span>linic</a>
+
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#facility">facility</a></li>
+                    <li><a href="#review">review</a></li>
+                    <li><a href="#contact">content</a></li>
+                    <li><a href="#post">post</a></li>
+                </ul>
+            </nav>
+
+            <div class="fas fa-bars"></div>
+
+        </div>
+        @RenderBody()
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)
+    </header>
+    </body></html>

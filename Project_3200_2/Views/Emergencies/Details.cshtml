@@ -1,0 +1,37 @@
+﻿@model Project_3200_2.Models.Emergency
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Emergency</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.EmergencyProblem)*@
+            Problem
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmergencyProblem)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.EmergencyLink)*@
+            Link
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmergencyLink)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EmergencyId }, new { @class = "btn button" }) |
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn button" })
+</p>

@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Project_3200_2.Models.Task>
+
+@{
+    ViewBag.Title = "DashBoard";
+    //  var needOp = ViewBag.IsOperation;
+    Layout = "~/Views/Shared/_Layout_Doctor.cshtml";
+    var type = ViewBag.type;
+
+}
+
+<h2>DashBoard</h2>
+
+@*<p>
+    @Html.ActionLink("Create New", "Create")
+</p>*@
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.TaskProblem)*@
+            <b>Problem</b>
+        </th>
+        <th>
+           @* @Html.DisplayNameFor(model => model.TaskDateTime)*@
+            <b>Date</b>
+        </th>
+        <th>
+           @* @Html.DisplayNameFor(model => model.PatientId)*@
+            <b>Patient Id</b>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Activity)*@
+            <b>Activity</b>
+        </th>
+
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        
+            if (item.TaskProblem == type)
+            {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PatientId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Activity)
+        </td>
+
+        <td>
+
+            @Html.ActionLink("Edit", "EditProfile", new { id = item.TaskId }, new { @class = "btn button" }) |
+            
+            @Html.ActionLink("SendOperation", "SendOperation", new { id = item.TaskId }, new { @class = "btn button" }) |
+            @Html.ActionLink("WriteMedicine", "../Prescriptions/WriteMedicine", new { id = item.TaskId }, new { @class = "btn button" })
+        </td>
+    </tr>
+            }
+        
+
+
+    }
+
+</table>

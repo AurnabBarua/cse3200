@@ -1,0 +1,59 @@
+﻿@model Project_3200_2.Models.Nurse
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Nurse</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NurseName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NurseName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NurseEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NurseEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NursePassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NursePassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NurseAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NurseAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NursePhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NursePhone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.NurseId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

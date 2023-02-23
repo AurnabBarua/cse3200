@@ -1,0 +1,80 @@
+﻿@model Project_3200_2.Models.Doctor
+
+@{
+    ViewBag.Title = "DashBoard";
+    Layout = "~/Views/Shared/_Layout_Doctor.cshtml";
+}
+
+<h2>DashBoard</h2>
+
+<div>
+    <h4>Doctor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DoctorName)*@
+            User Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorName)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DoctorEmail)*@
+            User Email
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorEmail)
+        </dd>
+
+        @*<dt>
+            @Html.DisplayNameFor(model => model.DoctorPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorPassword)
+        </dd>*@
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DoctorAddress)*@
+            User Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorAddress)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DoctorCatagory)*@
+            User Category
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorCatagory)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DoctorPhone)*@
+            User Phone
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorPhone)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DoctorRoom)*@
+            User Room
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorRoom)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditProfile", new { id = Model.DoctorId }, new { @class = "btn button" })
+</p>

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Project_3200_2.Models.Emergency>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Login.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create",null, new { @class = "btn button" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.EmergencyProblem)*@
+            Problem
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.EmergencyLink)*@
+            Link
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmergencyProblem)
+        </td>
+        <td>
+            <a href="@Html.DisplayFor(modelItem => item.EmergencyLink)">@Html.DisplayFor(modelItem => item.EmergencyLink)</a>
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EmergencyId}, new { @class = "btn button" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EmergencyId }, new { @class = "btn button" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EmergencyId }, new { @class = "btn button" })
+        </td>
+    </tr>
+}
+
+</table>

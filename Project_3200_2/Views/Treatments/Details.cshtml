@@ -1,0 +1,43 @@
+﻿@model Project_3200_2.Models.Treatment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Treatment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TreatmentProblem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TreatmentProblem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TreatmentDateTime)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TreatmentDateTime)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DoctorId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoctorId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.TreatmentId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

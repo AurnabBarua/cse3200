@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Project_3200_2.Models.Treatment>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create", null, new { @class = "btn button" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.TreatmentProblem)*@
+            Problem
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.TreatmentDateTime)*@
+            Date
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.PatientId)*@
+            Patient Id
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TreatmentProblem)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TreatmentDateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PatientId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.TreatmentId }, new { @class = "btn button" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.TreatmentId }, new { @class = "btn button" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.TreatmentId }, new { @class = "btn button" })
+        </td>
+    </tr>
+}
+
+</table>

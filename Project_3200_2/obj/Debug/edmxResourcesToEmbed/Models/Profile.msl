@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PROJECT_3200ModelStoreContainer" CdmEntityContainer="PROJECT_3200Entities">
+    <EntitySetMapping Name="DOCTOR_PROFILE">
+      <EntityTypeMapping TypeName="PROJECT_3200Model.DOCTOR_PROFILE">
+        <MappingFragment StoreEntitySet="DOCTOR_PROFILE">
+          <ScalarProperty Name="DOCTOR_ID" ColumnName="DOCTOR_ID" />
+          <ScalarProperty Name="DOCTOR_NAME" ColumnName="DOCTOR_NAME" />
+          <ScalarProperty Name="DOCTOR_EMAIL" ColumnName="DOCTOR_EMAIL" />
+          <ScalarProperty Name="DOCTOR_PASSWORD" ColumnName="DOCTOR_PASSWORD" />
+          <ScalarProperty Name="DOCTOR_ADDRESS" ColumnName="DOCTOR_ADDRESS" />
+          <ScalarProperty Name="DOCTOR_CATAGORY" ColumnName="DOCTOR_CATAGORY" />
+          <ScalarProperty Name="DOCTOR_PHONE" ColumnName="DOCTOR_PHONE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NURSE_PROFILE">
+      <EntityTypeMapping TypeName="PROJECT_3200Model.NURSE_PROFILE">
+        <MappingFragment StoreEntitySet="NURSE_PROFILE">
+          <ScalarProperty Name="NURSE_ID" ColumnName="NURSE_ID" />
+          <ScalarProperty Name="NURSE_NAME" ColumnName="NURSE_NAME" />
+          <ScalarProperty Name="NURSE_EMAIL" ColumnName="NURSE_EMAIL" />
+          <ScalarProperty Name="NURSE_PASSWORD" ColumnName="NURSE_PASSWORD" />
+          <ScalarProperty Name="NURSE_ADDRESS" ColumnName="NURSE_ADDRESS" />
+          <ScalarProperty Name="NURSE_PHONE" ColumnName="NURSE_PHONE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PATIENT_PROFILE">
+      <EntityTypeMapping TypeName="PROJECT_3200Model.PATIENT_PROFILE">
+        <MappingFragment StoreEntitySet="PATIENT_PROFILE">
+          <ScalarProperty Name="PATIENT_ID" ColumnName="PATIENT_ID" />
+          <ScalarProperty Name="PATIENT_NAME" ColumnName="PATIENT_NAME" />
+          <ScalarProperty Name="PATIENT_PHONE" ColumnName="PATIENT_PHONE" />
+          <ScalarProperty Name="PATIENT_ADDRESS" ColumnName="PATIENT_ADDRESS" />
+          <ScalarProperty Name="PATIENT_EMAIL" ColumnName="PATIENT_EMAIL" />
+          <ScalarProperty Name="PATIENT_PASSWORD" ColumnName="PATIENT_PASSWORD" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

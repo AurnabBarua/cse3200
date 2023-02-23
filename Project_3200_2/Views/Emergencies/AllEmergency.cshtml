@@ -1,0 +1,36 @@
+﻿@model IEnumerable<Project_3200_2.Models.Emergency>
+
+@{
+    ViewBag.Title = "AllEmergency";
+    Layout = "~/Views/Shared/_Layout_Patient.cshtml";
+}
+
+<h2>AllEmergency</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.EmergencyProblem)*@
+           <b> Problems </b>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.EmergencyLink)*@
+            <b>Link</b>
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmergencyProblem)
+        </td>
+        <td>
+           <a href="@Html.DisplayFor(modelItem => item.EmergencyLink)">@Html.DisplayFor(modelItem => item.EmergencyLink)</a>    
+        </td>
+        
+    </tr>
+}
+
+</table>

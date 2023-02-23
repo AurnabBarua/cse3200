@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="1000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap-grid.min.css">
+
+
+
+    <script src="https://kit.fontawesome.com/7b9da3eb34.js" crossorigin="anonymous"></script>
+
+
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Smart Health Clinic", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("Admin", "Index", "Admins")</li>
+                    <li>@Html.ActionLink("Patient", "Index", "Patients")</li>
+                    <li>@Html.ActionLink("Doctor", "Index", "Doctors")</li>
+                    <li>@Html.ActionLink("Nurse", "Index", "Nurses")</li>
+                    <li>@Html.ActionLink("Employee", "Index", "Employees")</li>
+                    <li>@Html.ActionLink("ETask", "Index", "ETasks")</li>
+                    <li>@Html.ActionLink("Operation", "Index", "Operations")</li>
+                    <li>@Html.ActionLink("Prescription", "Index", "Prescriptions")</li>
+                    <li>@Html.ActionLink("Task", "Index", "Tasks")</li>
+                    <li>@Html.ActionLink("Treatment", "Index", "Treatments")</li>
+                    @*<li>@Html.ActionLink("Emergency", "Index", "Emergencies")</li>*@
+
+                    @*<li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Treatment", "TakeService", "Treatments")</li>
+        <li>@Html.ActionLink("Task", "DashBoard", "Tasks")</li>
+        <li>@Html.ActionLink("Operation", "DashBoard", "Operations")</li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

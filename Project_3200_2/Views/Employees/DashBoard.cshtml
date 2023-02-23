@@ -1,0 +1,64 @@
+﻿@model Project_3200_2.Models.Employee
+
+@{
+    ViewBag.Title = "DashBoard";
+    Layout = "~/Views/Shared/_Layout_Employee.cshtml";
+}
+
+<h2>DashBoard</h2>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+           @* @Html.DisplayNameFor(model => model.EmployeeName)*@
+            User Name
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeName)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.EmployeeEmail)*@
+            User Email
+
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeEmail)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.EmployeePassword)*@
+            User Password
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeePassword)
+        </dd>
+
+        <dt>
+           @* @Html.DisplayNameFor(model => model.EmployeeAddress)*@
+            User Address
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeeAddress)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.EmployeePhone)*@
+            User Phone
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EmployeePhone)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditProfile", new { id = Model.EmployeeId}, new { @class="btn button"})
+</p>

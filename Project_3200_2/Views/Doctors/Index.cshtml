@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Project_3200_2.Models.Doctor>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create",null, new { @class = "btn button" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorCatagory)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DoctorRoom)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoctorName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoctorEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoctorPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoctorAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoctorCatagory)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoctorPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoctorRoom)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DoctorId }, new { @class = "btn button" }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DoctorId }, new { @class = "btn button" }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DoctorId }, new { @class = "btn button" })
+        </td>
+    </tr>
+}
+
+</table>

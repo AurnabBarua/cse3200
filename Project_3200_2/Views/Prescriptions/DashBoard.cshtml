@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Project_3200_2.Models.Prescription>
+
+@{
+    ViewBag.Title = "DashBoard";
+    var id = (int)Session["PatientId"];
+    Layout = "~/Views/Shared/_Layout_Patient.cshtml";
+}
+
+<h2>DashBoard</h2>
+
+
+<table class="table table-hover">
+    
+    <thead><tr>
+        <th>
+           @* @Html.DisplayNameFor(model => model.Doctor.DoctorName)*@
+            <b> Doctor Name</b>
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Patient.PatientName)*@
+            <b> Patient Name</b>
+        </th>
+        <th>
+           @* @Html.DisplayNameFor(model => model.PrescriptionMessage)*@
+            <b> Prescribed Medicine</b>
+        </th>
+        <th></th></tr>
+    </thead>
+
+    @foreach (var item in Model)
+    {
+        
+            if (item.PatientId == id)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Doctor.DoctorName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Patient.PatientName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.PrescriptionMessage)
+                    </td>
+                   
+                </tr>
+            }
+        
+
+    }
+
+</table>
